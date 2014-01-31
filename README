@@ -1,0 +1,21 @@
+Extended two class templates from BST repo.
+
+benchtree: C++ program benchtree that permits benchmarking the performance of 
+a RST implementation, an ordinary BST implementation, and the
+C++ STL std::set structure. "performance" means "how many comparisons were 
+required to do a successful find operation, in the average case"
+
+benchtree takes four command line arguments:
+1. string which must be either "bst", "rst", or "set", and indicates whether
+   benchmarking should be done using a BST, a RST, or std::set.
+2. string which must be either "sorted" or "shuffled", and indicates whether
+   the keys inserted in the structure are inserted in sorted order, or
+   shuffled (randomized) order.
+3. integer which specifes the maximum size of the tree to be built in the
+   benchmarking. Trees should be build with sizes N that are a power of 2,
+   minus 1, in the range 1 up through this maximum size.
+   This permits comparing results to the 'best possible' binary tree with
+   size N, a completely filled tree, which will always have a size that is a 
+   power of 2, minus 1.
+4. integer that specifies how many runs will be done, and averaged over, for each N
+
